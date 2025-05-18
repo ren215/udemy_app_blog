@@ -1,17 +1,23 @@
+'use client';
+
+import { useActionState } from 'react';
+import { userRegistration } from '../lib/actions/userRegistration';
 import './login.scss';
 
 const LoginPage = () => {
+  const [, formAction] = useActionState(userRegistration, { success: false, errors: {} });
+
   return (
     <div className="login-container">
       <h3>ログイン</h3>
-      <form action="">
+      <form action={formAction}>
         <div className="email-content">
           <p>メールアドレス</p>
-          <input type="text" placeholder="メールアドレス" />
+          <input id="email" name="email" type="text" placeholder="メールアドレス" />
         </div>
         <div className="password-content">
           <p>パスワード</p>
-          <input type="password" placeholder="パスワード" />
+          <input id="password" name="password" type="password" placeholder="パスワード" />
         </div>
         <button>ログイン</button>
       </form>

@@ -10,7 +10,7 @@ type ActionState = {
   serverError?: string;
 };
 
-export const userRegistration = async (formData: FormData): Promise<ActionState> => {
+export const userRegistration = async (prevState: ActionState, formData: FormData): Promise<ActionState> => {
   // 入力された値を取得
   const email = formData.get('email') as string;
   const password = formData.get('password') as string;
