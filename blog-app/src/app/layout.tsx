@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Header from './_components/Header/Header';
 import './globals.css';
 
 type Props = {
@@ -7,8 +8,11 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="ja">
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
