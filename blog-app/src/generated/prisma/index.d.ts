@@ -881,7 +881,6 @@ export namespace Prisma {
 
   export type UserInfoMinAggregateOutputType = {
     id: string | null
-    name: string | null
     email: string | null
     password: string | null
     createAd: Date | null
@@ -890,7 +889,6 @@ export namespace Prisma {
 
   export type UserInfoMaxAggregateOutputType = {
     id: string | null
-    name: string | null
     email: string | null
     password: string | null
     createAd: Date | null
@@ -899,7 +897,6 @@ export namespace Prisma {
 
   export type UserInfoCountAggregateOutputType = {
     id: number
-    name: number
     email: number
     password: number
     createAd: number
@@ -910,7 +907,6 @@ export namespace Prisma {
 
   export type UserInfoMinAggregateInputType = {
     id?: true
-    name?: true
     email?: true
     password?: true
     createAd?: true
@@ -919,7 +915,6 @@ export namespace Prisma {
 
   export type UserInfoMaxAggregateInputType = {
     id?: true
-    name?: true
     email?: true
     password?: true
     createAd?: true
@@ -928,7 +923,6 @@ export namespace Prisma {
 
   export type UserInfoCountAggregateInputType = {
     id?: true
-    name?: true
     email?: true
     password?: true
     createAd?: true
@@ -1010,7 +1004,6 @@ export namespace Prisma {
 
   export type UserInfoGroupByOutputType = {
     id: string
-    name: string
     email: string
     password: string
     createAd: Date
@@ -1036,7 +1029,6 @@ export namespace Prisma {
 
   export type userInfoSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
     email?: boolean
     password?: boolean
     createAd?: boolean
@@ -1045,7 +1037,6 @@ export namespace Prisma {
 
   export type userInfoSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
     email?: boolean
     password?: boolean
     createAd?: boolean
@@ -1054,7 +1045,6 @@ export namespace Prisma {
 
   export type userInfoSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
     email?: boolean
     password?: boolean
     createAd?: boolean
@@ -1063,21 +1053,19 @@ export namespace Prisma {
 
   export type userInfoSelectScalar = {
     id?: boolean
-    name?: boolean
     email?: boolean
     password?: boolean
     createAd?: boolean
     updatedAd?: boolean
   }
 
-  export type userInfoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "createAd" | "updatedAd", ExtArgs["result"]["userInfo"]>
+  export type userInfoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "password" | "createAd" | "updatedAd", ExtArgs["result"]["userInfo"]>
 
   export type $userInfoPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "userInfo"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      name: string
       email: string
       password: string
       createAd: Date
@@ -1506,7 +1494,6 @@ export namespace Prisma {
    */
   interface userInfoFieldRefs {
     readonly id: FieldRef<"userInfo", 'String'>
-    readonly name: FieldRef<"userInfo", 'String'>
     readonly email: FieldRef<"userInfo", 'String'>
     readonly password: FieldRef<"userInfo", 'String'>
     readonly createAd: FieldRef<"userInfo", 'DateTime'>
@@ -1888,7 +1875,6 @@ export namespace Prisma {
 
   export const UserInfoScalarFieldEnum: {
     id: 'id',
-    name: 'name',
     email: 'email',
     password: 'password',
     createAd: 'createAd',
@@ -1940,7 +1926,6 @@ export namespace Prisma {
     OR?: userInfoWhereInput[]
     NOT?: userInfoWhereInput | userInfoWhereInput[]
     id?: StringFilter<"userInfo"> | string
-    name?: StringFilter<"userInfo"> | string
     email?: StringFilter<"userInfo"> | string
     password?: StringFilter<"userInfo"> | string
     createAd?: DateTimeFilter<"userInfo"> | Date | string
@@ -1949,7 +1934,6 @@ export namespace Prisma {
 
   export type userInfoOrderByWithRelationInput = {
     id?: SortOrder
-    name?: SortOrder
     email?: SortOrder
     password?: SortOrder
     createAd?: SortOrder
@@ -1962,7 +1946,6 @@ export namespace Prisma {
     AND?: userInfoWhereInput | userInfoWhereInput[]
     OR?: userInfoWhereInput[]
     NOT?: userInfoWhereInput | userInfoWhereInput[]
-    name?: StringFilter<"userInfo"> | string
     password?: StringFilter<"userInfo"> | string
     createAd?: DateTimeFilter<"userInfo"> | Date | string
     updatedAd?: DateTimeFilter<"userInfo"> | Date | string
@@ -1970,7 +1953,6 @@ export namespace Prisma {
 
   export type userInfoOrderByWithAggregationInput = {
     id?: SortOrder
-    name?: SortOrder
     email?: SortOrder
     password?: SortOrder
     createAd?: SortOrder
@@ -1985,7 +1967,6 @@ export namespace Prisma {
     OR?: userInfoScalarWhereWithAggregatesInput[]
     NOT?: userInfoScalarWhereWithAggregatesInput | userInfoScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"userInfo"> | string
-    name?: StringWithAggregatesFilter<"userInfo"> | string
     email?: StringWithAggregatesFilter<"userInfo"> | string
     password?: StringWithAggregatesFilter<"userInfo"> | string
     createAd?: DateTimeWithAggregatesFilter<"userInfo"> | Date | string
@@ -1994,7 +1975,6 @@ export namespace Prisma {
 
   export type userInfoCreateInput = {
     id?: string
-    name: string
     email: string
     password: string
     createAd?: Date | string
@@ -2003,7 +1983,6 @@ export namespace Prisma {
 
   export type userInfoUncheckedCreateInput = {
     id?: string
-    name: string
     email: string
     password: string
     createAd?: Date | string
@@ -2012,7 +1991,6 @@ export namespace Prisma {
 
   export type userInfoUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     createAd?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -2021,7 +1999,6 @@ export namespace Prisma {
 
   export type userInfoUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     createAd?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -2030,7 +2007,6 @@ export namespace Prisma {
 
   export type userInfoCreateManyInput = {
     id?: string
-    name: string
     email: string
     password: string
     createAd?: Date | string
@@ -2039,7 +2015,6 @@ export namespace Prisma {
 
   export type userInfoUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     createAd?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -2048,7 +2023,6 @@ export namespace Prisma {
 
   export type userInfoUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     createAd?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -2082,7 +2056,6 @@ export namespace Prisma {
 
   export type userInfoCountOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
     email?: SortOrder
     password?: SortOrder
     createAd?: SortOrder
@@ -2091,7 +2064,6 @@ export namespace Prisma {
 
   export type userInfoMaxOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
     email?: SortOrder
     password?: SortOrder
     createAd?: SortOrder
@@ -2100,7 +2072,6 @@ export namespace Prisma {
 
   export type userInfoMinOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
     email?: SortOrder
     password?: SortOrder
     createAd?: SortOrder
